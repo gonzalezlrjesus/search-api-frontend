@@ -1,0 +1,8 @@
+.imgs {
+    height: 100%;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+}

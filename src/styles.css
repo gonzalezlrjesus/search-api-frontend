@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  }
+
+/* this background was original designed by Author: Michael van den Berg but i made few modifications */
+body {
+	color: white;
+	text-shadow: 0px 0px 5px #123456;
+	height: 100vh;
+	background:
+		linear-gradient(-135deg, rgb(34, 76, 152) 10%, transparent),
+		repeating-linear-gradient(45deg, rgba(34, 76, 152, 1) 0%, rgba(31, 48, 94, 0.6) 5%, transparent 5%, transparent 10%),
+		repeating-linear-gradient(-45deg, rgba(34, 76, 152, 0.4) 0%, rgba(31, 48, 94, 0.5) 5%, transparent 5%, transparent 10%);
+	background-color: rgba(34, 76, 152, 0.25);
+}
