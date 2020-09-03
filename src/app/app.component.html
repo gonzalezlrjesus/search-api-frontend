@@ -1,18 +1,18 @@
 <div class="forms">
-  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
-  
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm.value)">
     <div>
       <label for="name">
         Buscar
       </label>
-      <input id="search" type="search"  placeholder="Search text" formControlName="name">
-    <button class="button" type="submit">Buscar</button>
-  </div>
+      <input id="search" type="search"  placeholder="Buscar" formControlName="name">
+      <button class="button" type="submit">Buscar</button>
+    </div>
   </form> 
 </div>
 
 
-<ul *ngFor="let user of usersArray" #showWhenLoaded>
+<div *ngFor="let user of itemsList">
+  
   <mat-grid-list cols="4" rowHeight="1.5:1">
 
     <mat-grid-tile></mat-grid-tile>
@@ -23,14 +23,10 @@
         <li>{{user.kind}}</li>
         <li>{{user.date}}</li>
       </ul>     
-
     </mat-grid-tile>
     <mat-grid-tile></mat-grid-tile>
 
-
   </mat-grid-list>
   
-
-  
-</ul>
+</div>
 

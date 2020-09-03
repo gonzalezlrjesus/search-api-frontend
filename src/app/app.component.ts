@@ -9,23 +9,23 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AppComponent {
 
-usersArray: Array<any> = [];
-checkoutForm: FormGroup;
+itemsList: Array<any> = [];
+searchForm: FormGroup;
 
 constructor(private formBuilder: FormBuilder,private http: HttpClient) { 
-  this.checkoutForm = this.formBuilder.group({
+  this.searchForm = this.formBuilder.group({
     name: '',
   });
 }
 
 onSubmit(value) {
 
-  this.usersArray = [];
+  this.itemsList = [];
   let urlGET = `https://search-api-tribal.herokuapp.com/v1/search?query=${value.name}`;
 
   this.http.get<any[]>(urlGET).subscribe(data => {
     data["query"].forEach(element => {
-      this.usersArray.push({name: element.name, kind: element.kind, date: element.date, originapi: element.originapi});
+      this.itemsList.push({name: element.name, kind: element.kind, date: element.date, originapi: element.originapi});
     });
   });
 
