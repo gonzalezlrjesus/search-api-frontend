@@ -1,5 +1,5 @@
 {
-  "name": "test1",
+  "name": "search-api-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
